@@ -5,36 +5,49 @@ package com.example.fcg1400019345.horoscopo;
  */
 
 public class ServidorFalso {
-    public String[] pegaDados() {
-        String[] dados1 = {
-                "Áres        - Tudo de bom",
-                "Touro       - Tudo de bom",
-                "Gêmeos      - Tudo de bom",
-                "Câncer      - Tudo de bom",
-                "Leão        - Tudo de bom",
-                "Virgem      - Tudo de bom",
-                "Libra       - Tudo de bom",
-                "Escorpião   - Tudo de bom",
-                "Sargitário  - Tudo de bom",
-                "Capricórnio - Tudo de bom",
-                "Aquário     - Tudo de bom",
-                "Peixes      - Tudo de bom"
+    public String[][] pegaDados() {
+        String[][] dados1 = {
+                {"1442361600", "Áres", "Tudo de bom"},
+                {"1442361600","Touro","Você é muito Sortudo(a)"},
+                {"1442361600","Gêmeos","      - Maravilha"},
+                {"1442361600", "Câncer ","     - Tudo de bom"},
+                {"1442361600","Leão      ","  - Você vai ser muito feliz"},
+                {"1442361600","Virgem   ","   - Tudo de bom"},
+                {"1442361600", "Libra   ","    - Tudo de bom"},
+                {"1442361600", "Escorpião ","  - Você é muito Esperto"},
+                {"1442361600","Sargitário "," - Tudo de bom, Seja Feliz"},
+                {"1442361600","Capricórnio ","- Tudo de bom"},
+                {"1442361600","Aquário ","    - Tudo de bom"},
+                {"1442361600","Peixes  ","    - Tudo de bom"}
 
         };
 
-        String[] dados2 = {
-                "Áres        - Tudo Maravilhoso",
-                "Touro       - Tudo Maravilhoso",
-                "Gêmeos      - Tudo Maravilhoso",
-                "Câncer      - Tudo Maravilhoso",
-                "Leão        - Tudo Maravilhoso",
-                "Virgem      - Tudo Maravilhoso",
-                "Libra       - Tudo Maravilhoso",
-                "Escorpião   - Tudo Maravilhoso",
-                "Sargitário  - Tudo Maravilhoso",
-                "Capricórnio - Tudo Maravilhoso",
-                "Aquário     - Tudo Maravilhoso",
-                "Peixes      - Tudo Maravilhoso"
+        String[][] dados2 = {
+                {"1442448000", "Áres", "Tudo de bom"},
+                {"1442448000","Touro","Você é muito Sortudo(a)"},
+                {"1442448000","Gêmeos","      - Maravilha"},
+                {"1442448000", "Câncer ","     - Tudo de bom"},
+                {"1442448000","Leão      ","  - Você vai ser muito feliz"},
+                {"1442448000","Virgem   ","   - Tudo de bom"},
+                {"1442448000", "Libra   ","    - Tudo de bom"},
+                {"1442448000", "Escorpião ","  - Você é muito Esperto"},
+                {"1442448000","Sargitário "," - Tudo de bom, Seja Feliz"},
+                {"1442448000","Capricórnio ","- Tudo de bom"},
+                {"1442448000","Aquário ","    - Tudo de bom"},
+                {"1442448000","Peixes  ","    - Tudo de bom"}
+//
+//                {"1442448000", "Áres        - Tudo Maravilhoso"},
+//                {"1442448000","Touro       - Jogue na Mega Sena  "},
+//                {"1442448000", "Gêmeos      - Tudo Maravilhoso"},
+//                {"1442448000","Câncer      - Tudo Maravilhoso"},
+//                {"1442448000", "Leão        - Tudo Maravilhoso"},
+//                {"1442448000", "Virgem      - Tudo Maravilhoso"},
+//                {"1442448000","Libra       - Tudo Maravilhoso"},
+//                {"1442448000","Escorpião   - Tudo Maravilhoso"},
+//                {"1442448000","Sargitário  - Tudo Maravilhoso"},
+//                {"1442448000","Capricórnio - Tudo Maravilhoso"},
+//                {"1442448000","Aquário     - Tudo Maravilhoso"},
+//                {"1442448000","Peixes      - Tudo Maravilhoso"}
         };
 
         // Para não pegar sempre o mesmo...
