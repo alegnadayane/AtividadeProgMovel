@@ -24,25 +24,24 @@ public class AtividadeDetalhes extends ActionBarActivity {
         setContentView(R.layout.activity_atividade_detalhes);
 
         Intent intent = getIntent();
-        String detailText = intent.getStringExtra(Intent.EXTRA_TEXT);
+
 
         if (intent.hasExtra(Intent.EXTRA_TEXT)) {
+
+            long id = intent.getLongExtra(Intent.EXTRA_TEXT,0L);
+
             TextView detailTextView = (TextView) findViewById(R.id.detalhe_item_texto);
 
             SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
             String signo = prefs.getString(getString(R.string.conf_signo_chave),
                     getString(R.string.conf_signo_padrao));
 
-            detailText = "Seu signo é " + signo + ", e a  previsão escolhida é " + detailText;
+            String detailText= Long.toString(id);
 
             detailTextView.setText(detailText);
         }
 
-        // LIGAR BOTAO NA CLASSE
 
-        Button botao = (Button) findViewById(R.id.botao);
-
-        botao.setOnClickListener(new BotaoClicado());
     }
 
     @Override
