@@ -3,6 +3,9 @@ package com.example.fcg1400019345.horoscopo;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -13,6 +16,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 @SuppressWarnings("deprecation")
@@ -28,21 +34,53 @@ public class AtividadeDetalhes extends ActionBarActivity {
 
         if (intent.hasExtra(Intent.EXTRA_TEXT)) {
 
-            long id = intent.getLongExtra(Intent.EXTRA_TEXT,0L);
+            long id = intent.getLongExtra(Intent.EXTRA_TEXT, 0L);
 
-            TextView detailTextView = (TextView) findViewById(R.id.detalhe_item_texto);
 
-            SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
-            String signo = prefs.getString(getString(R.string.conf_signo_chave),
-                    getString(R.string.conf_signo_padrao));
+            SQLiteOpenHelper dbHelper = new HoroscopoDBHelper(getApplicationContext());
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            String detailText= Long.toString(id);
+            Cursor cursor;
+            cursor = db.query(
+                    ContratoDB.Horoscopo.NOME_TABELA, // Tabela
+                    null, // colunas (todas)
+                    ContratoDB.Horoscopo._ID + "=" + id, // colunas para o where
+                    null, // valores para o where
+                    null, // group by
+                    null, // having
+                    null  // sort by
+            );
 
-            detailTextView.setText(detailText);
+            if (cursor.moveToNext()) {
+
+                long data = cursor.getLong(cursor.getColumnIndex(ContratoDB.Horoscopo.COLUNA_DATA));
+                String titulo = cursor.getString(cursor.getColumnIndex(ContratoDB.Horoscopo.COLUNA_SIGNO));
+                String texto = cursor.getString(cursor.getColumnIndex(ContratoDB.Horoscopo.COLUNA_PREVISAO));
+
+                String dataBonita = new SimpleDateFormat("dd/MM/yyyy").format(new Date(data * 1000));
+            }
+
+
+
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            String signo = prefs.getString("signo", "Touro ");
+
+
+            TextView linha1 = (TextView) findViewById(R.id.text_signo);
+            linha1.setText( Long.toString(id));
+
+            TextView linha2 = (TextView) findViewById(R.id.text_data);
+            linha2.setText( Long.toString(id));
+
+            TextView mensagem = (TextView) findViewById(R.id.text_previsao);
+            mensagem.setText( Long.toString(id));
+
+
+
         }
-
-
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,7 +98,7 @@ public class AtividadeDetalhes extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent configlIntent = new Intent(getApplicationContext(),AtividadeConfiguracao.class);
+            Intent configlIntent = new Intent(getApplicationContext(), AtividadeConfiguracao.class);
             startActivity(configlIntent);
             return true;
         }
@@ -86,5 +124,4 @@ public class AtividadeDetalhes extends ActionBarActivity {
         }
 
     }
-
 }

@@ -53,13 +53,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="linha1"
         android:id="@+id/text_signo"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignLeft="@+id/detalhe_item_texto"
         android:layout_alignStart="@+id/detalhe_item_texto"
         android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_marginStart="27dp"
+        android:singleLine="true" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -7,14 +7,14 @@ package com.example.fcg1400019345.horoscopo;
 public class ServidorFalso {
     public String[][] pegaDados() {
         String[][] dados1 = {
-                {"1442361600", "Áres", "Tudo de bom"},
+                {"1442361600","Áries", "Tudo de bom"},
                 {"1442361600","Touro","Você é muito Sortudo(a)"},
                 {"1442361600","Gêmeos","      - Maravilha"},
-                {"1442361600", "Câncer ","     - Tudo de bom"},
+                {"1442361600","Câncer ","     - Tudo de bom"},
                 {"1442361600","Leão      ","  - Você vai ser muito feliz"},
                 {"1442361600","Virgem   ","   - Tudo de bom"},
-                {"1442361600", "Libra   ","    - Tudo de bom"},
-                {"1442361600", "Escorpião ","  - Você é muito Esperto"},
+                {"1442361600","Libra   ","    - Tudo de bom"},
+                {"1442361600","Escorpião ","  - Você é muito Esperto"},
                 {"1442361600","Sargitário "," - Tudo de bom, Seja Feliz"},
                 {"1442361600","Capricórnio ","- Tudo de bom"},
                 {"1442361600","Aquário ","    - Tudo de bom"},
@@ -23,14 +23,14 @@ public class ServidorFalso {
         };
 
         String[][] dados2 = {
-                {"1442448000", "Áres", "Tudo de bom"},
+                {"1442448000","Áries", "Tudo de bom"},
                 {"1442448000","Touro","Você é muito Sortudo(a)"},
                 {"1442448000","Gêmeos","      - Maravilha"},
-                {"1442448000", "Câncer ","     - Tudo de bom"},
+                {"1442448000","Câncer ","     - Tudo de bom"},
                 {"1442448000","Leão      ","  - Você vai ser muito feliz"},
                 {"1442448000","Virgem   ","   - Tudo de bom"},
-                {"1442448000", "Libra   ","    - Tudo de bom"},
-                {"1442448000", "Escorpião ","  - Você é muito Esperto"},
+                {"1442448000","Libra   ","    - Tudo de bom"},
+                {"1442448000","Escorpião ","  - Você é muito Esperto"},
                 {"1442448000","Sargitário "," - Tudo de bom, Seja Feliz"},
                 {"1442448000","Capricórnio ","- Tudo de bom"},
                 {"1442448000","Aquário ","    - Tudo de bom"},
